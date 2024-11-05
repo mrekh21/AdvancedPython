@@ -5,29 +5,135 @@ sources:
     tables:
       - name: channels
         description: "Channels data from Parquet file."
+        columns:
+          - name: channel_id
+            description: "Unique identifier for each sales channel."
+          - name: channel_name
+            description: "Name of the sales channel."
         meta:
-          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/channels.parquet'
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC/AdvancedPython/dbt_assignment/my_dbt_project/models/data/channels.parquet'
       - name: customers
         description: "Customers data from Parquet file."
+        columns:
+          - name: customer_id
+            description: "Unique ID for each customer."
+          - name: first_name
+            description: "Customer's first name."
+          - name: last_name
+            description: "Customer's last name."
+          - name: email
+            description: "Customer's email address."
         meta:
-          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/customers.parquet'
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC/AdvancedPython/dbt_assignment/my_dbt_project/models/data/customers.parquet'
       - name: products
         description: "Products data from Parquet file."
+        columns:
+          - name: name
+            description: "Name of the product."
+          - name: city
+            description: "City of the product"
+          - name: price
+            description: "Price of the product."
+          - name: product_id
+            description: "Unique ID for each product."
         meta:
-          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/products.parquet'
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC/AdvancedPython/dbt_assignment/my_dbt_project/models/data/products.parquet'
       - name: resellers
         description: "Resellers data from Parquet file."
+        columns:
+          - name: reseller_id
+            description: "Unique ID for each reseller."
+          - name: reseller_name
+            description: "Name of the reseller."
+          - name: commission_pct
+            description: "Commission rate that reseller earns."
         meta:
-          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers.parquet'
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC/AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers.parquet'
       - name: resellers_type1
         description: "Resellers Type 1 data from Parquet file."
+        columns:
+          - name: product_name
+            description: "Name of the product"
+          - name: quantity
+            description: "Quantity of products sold."
+          - name: total_amount
+            description: "Total amount of the product sold."
+          - name: sales_channel
+            description: "Name of the channel where transaction occurred."
+          - name: customer_first_name
+            description: "First name of the customer."
+          - name: customer_last_name
+            description: "Last name of the customer."
+          - name: customer_email
+            description: "Email address of the customer."
+          - name: series_city
+            description: "City of the series."
+          - name: created_date
+            description: "Date the transaction was created."
+          - name: reseller_id
+            description: "ID of the reseller."
+          - name: transaction_id
+            description: "Unique ID for each type1 reseller transaction."
         meta:
-          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers_type1.parquet'
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC/AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers_type1.parquet'
       - name: resellers_type2
         description: "Resellers Type 2 data from Parquet file."
+        columns:
+          - name: date
+            description: "Date the transaction was created."
+          - name: reseller_id
+            description: "ID of the reseller."
+          - name: product_name
+            description: "Name of the product."
+          - name: qty
+            description: "Quantity of products."
+          - name: total_amount
+            description: "Total amount of the product sold."
+          - name: sales_channel
+            description: "Name of the channel where transaction occurred."
+          - name: customer
+            description: "Information about customer."
+          - name: date_created
+            description: "Date the transaction was created."
+          - name: series_city
+            description: "City of the series."
+          - name: created_date
+            description: "Date the transaction was created."
+          - name: transaction_id
+            description: "Unique ID for each type2 reseller transaction."
         meta:
-          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers_type2.parquet'
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC/AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers_type2.parquet'
       - name: main
         description: "Main data from Parquet file."
+        columns:
+          - name: transaction_id
+            description: "Unique ID for each transaction."
+          - name: customer_id
+            description: "ID of the customer making the transaction."
+          - name: product_id
+            description: "ID of the product purchased."
+          - name: amount
+            description: "Total amount of the transaction."
+          - name: qty
+            description: "Quantity of products purchased."
+          - name: channel_id
+            description: "ID of the channel where the transaction occurred."
+          - name: bought_date
+            description: "Date of the transaction."
         meta:
-          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/main.parquet'
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC/AdvancedPython/dbt_assignment/my_dbt_project/models/data/main.parquet'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

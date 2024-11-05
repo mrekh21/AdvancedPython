@@ -22,6 +22,11 @@ The dbt project has the following directory structure:
 ### Using the project
 
 Try running the following commands:
+- dbt-env/Scripts/activate
+- cd dbt_assignment
+- cd my_dbt_project
+- dbt clean
 - dbt run
 - dbt test
-
+- dbt docs generate
+- dbt docs serve
