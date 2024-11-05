@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: sales_data
+    tables:
+      - name: channels
+        description: "Channels data from Parquet file."
+        meta:
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/channels.parquet'
+      - name: customers
+        description: "Customers data from Parquet file."
+        meta:
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/customers.parquet'
+      - name: products
+        description: "Products data from Parquet file."
+        meta:
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/products.parquet'
+      - name: resellers
+        description: "Resellers data from Parquet file."
+        meta:
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers.parquet'
+      - name: resellers_type1
+        description: "Resellers Type 1 data from Parquet file."
+        meta:
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers_type1.parquet'
+      - name: resellers_type2
+        description: "Resellers Type 2 data from Parquet file."
+        meta:
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/resellers_type2.parquet'
+      - name: main
+        description: "Main data from Parquet file."
+        meta:
+          external_location: 'C:/Users/User/Desktop/AdvancedPython_TBC\AdvancedPython/dbt_assignment/my_dbt_project/models/data/main.parquet'

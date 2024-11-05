@@ -1,0 +1,27 @@
+version: 2
+models:
+  - name: stg_customers
+    description: "Contains customer information."
+    columns:
+      - name: customer_id
+        description: "Unique ID for each customer."
+        data_tests:
+          - unique
+          - not_null
+      - name: email
+        description: "Email for each customer."
+        data_tests:
+          - not_null
+
+  - name: stg_products
+    description: "Contains product information."
+    columns:
+      - name: product_id
+        description: "Unique ID for each product."
+        data_tests:
+          - unique
+          - not_null
+      - name: price
+        description: "Price for each product."
+        data_tests:
+          - not_null
